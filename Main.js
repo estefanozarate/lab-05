@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Configuration, OpenAIApi } from 'your-openai-library'; // Replace 'your-openai-library' with the actual library you are using
+import { Configuration, OpenAIApi } from 'your-openai-library'; 
 
 const constPrompt = 'You: ';
 
@@ -22,22 +22,22 @@ const Main = () => {
         temperature: 0,
         max_tokens: 60,
         top_p: 1.0,
-        frequency_penalty: 0.5, // Corrected typo in frequency_penalty
+        frequency_penalty: 0.5, 
         presence_penalty: 0.0,
-        stop: ["You:"], // Corrected stop condition
+        stop: ["You:"], 
 
       });
       setOutput(response.data.choices[0].text);
     } catch (error) {
       console.error(error);
     } finally {
-      setInput(''); // Clear input after processing
+      setInput(''); 
     }
   };
 
   return (
     <div>
-      {/* Your JSX for rendering the component */}
+      {}
       <input
         type="text"
         value={input}
